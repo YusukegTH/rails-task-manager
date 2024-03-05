@@ -1,0 +1,11 @@
+<h1><%=@task[:title]%></h1>
+<div class="container w-100 bg-light rounded p-3 m-3">
+  <p><%=@task[:details]%></p>
+</div>
+<div class="container">
+  <p>The task is <%= @task[:completed] ? "completed" : "not completed yet"%></p>
+</div>
+
+<%= link_to "Edit task", edit_task_path  %>
+
+<%= link_to "Back to list", "/index" %>
